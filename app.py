@@ -17,7 +17,7 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
-@app.route('/index', methods=['GET','POST'])
+@app.route('/index')
 def home():
     return render_template('index.html')
 
