@@ -33,7 +33,7 @@ def predict():
         result = ValuePredictor(to_predict_list)       
         return render_template("predict.html", prediction='le salaire de la personne questionnée est de DH {}'.format(result))    
 
-@app.route('/data', methods=['GET','POST'])
+@app.route('/data', methods=['POST'])
 def data():
     if request.method == 'POST':
         f=request.form['csvfile']
